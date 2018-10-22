@@ -1,0 +1,75 @@
+.optics_products {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.optics_products .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.optics_products .content .filter_column {
+  width: 20%;
+  padding-right: 2%;
+}
+
+.optics_products .content .filter_column .filters_heading {
+  background: #00c7d3;
+  font-size: 16px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 1.36px;
+}
+
+.optics_products .content .filter_column .filterbox {
+  font-size: 14px;
+  background: #f7f7f7;
+}
+
+.optics_products .content .filter_column .filterbox .list-group-items {
+  padding: 15px;
+}
+
+.optics_products .content .filter_column .filterbox .list-group-items .checkbox {
+  padding: 4px;
+}
+
+.optics_products .content .filter_column .filterbox .box-footer {
+  text-align: right;
+}
+
+.optics_products .content .optics_products__content {
+  width: 80%;
+}
+
+.optics_products .content .optics_products__content .order_bar__sort_by_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.optics_products .content .optics_products__content .products_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.optics_products .content .optics_products__content .products_list .product_box {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  width: 25%;
+}
+/*# sourceMappingURL=optics_style.css.map */

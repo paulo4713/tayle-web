@@ -1,0 +1,26 @@
+{
+  "name": "taller-1",
+  "version": "1.0.0",
+  "description": "Taller1 + Express",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paulo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulo4713/tayle_web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paulo4713/tayle_web/issues"
+  },
+  "homepage": "https://github.com/paulo4713/tayle_web#readme"
+}

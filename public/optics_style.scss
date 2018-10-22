@@ -1,0 +1,51 @@
+.optics_products {
+  background: #fff;
+  padding: 40px 0;
+  .content {
+    display: flex;
+    .filter_column {
+      width: 20%;
+      padding-right: 2%;
+      .filters_heading {
+        background: #00c7d3;
+        font-size: 16px;
+        padding: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0;
+        color: #fff;
+        letter-spacing: 1.36px;
+      }
+      .filterbox {
+        font-size: 14px;
+        background: #f7f7f7;
+        .list-group-items {
+          padding: 15px;
+          .checkbox {
+            padding: 4px;
+          }
+        }
+        .box-footer {
+          text-align: right;
+        }
+      }
+    }
+    .optics_products__content {
+      width: 80%;
+      .order_bar__sort_by_wrapper {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .products_list {
+        display: flex;
+        flex-flow: row wrap;
+
+        .product_box {
+          flex-shrink: 1;
+          flex-basis: auto;
+          width: 25%;
+        }
+      }
+    }
+  }
+}

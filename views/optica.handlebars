@@ -118,7 +118,7 @@
                         <label class="control_label">Ordenar por:</label>
                     </div>
                     <div class="sort_by_wrapper__input">
-                        <select id="input-sort" class="form-control hasCustomSelect" onchange="location = this.value;"
+                        <select id="input-sort" class="form-control hasCustomSelect"
                             style="-webkit-appearance: menulist-button; width: 180px; position: absolute; opacity: 0; height: 28px; font-size: 14px;">
 
                             <option selected="selected">Nombre (A - Z) </option>
@@ -140,18 +140,18 @@
             </div>
 
             <div class="products_list">
-                {{#each products}}
+                {{#each productos}}
                 <div class="product_box">
                     <div class="product_box__image">
                         <a href="#">
-                            <img src="{{this.img}}" alt="">
+                            <img src="{{this.img_a}}" alt="">
                         </a>
                     </div>
                     <div class="product_box__caption">
-                        <p class="price">
+                        <p>
                             <span class="price">{{this.price}}</span>
                         </p>
-                        <h4><a href="#">{{this.name}}</a></h4>
+                        <h4 class="glass_reference"><a href="#">{{this.name}}</a></h4>
                         <div class="btn-add-to-cart">
                             <button type="button" title="Add to cart" class="addtocart">Add to Cart</button>
                         </div>

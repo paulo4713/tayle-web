@@ -1,27 +1,27 @@
 var arregloServicios = [
     {
-        img: './icons/optotype.svg',
+        img: './icons/optotype.png',
         titulo: 'Exámen Visual Detallado',
         descripcion: 'Durante este exámen, se medirá como se desempeña su visión de lejos en comparación con la mayoría de personas.',
         boton: 'Conoce Más',
     }
     ,
     {
-        img: './icons/test-glasses.svg',
+        img: './icons/test-glasses.png',
         titulo: 'Servicio Óptico Completo',
         descripcion: 'Una evaluación completa incluye el examen refractivo, binocular, examen de la percepción visual y examen de salud ocular.',
         boton: 'Conoce Más',
     }
     ,
     {
-        img: './icons/contact-lens.svg',
+        img: './icons/contact-lens.png',
         titulo: 'Estudio de Lentes de Contacto',
         descripcion: 'Si usa o desea usar lentes de contacto, necesita un examen de lentes de contacto además de un examen completo de la vista.',
         boton: 'Conoce Más',
     }
     ,
     {
-        img: './icons/eye-drops.svg',
+        img: './icons/eye-drops.png',
         titulo: 'Cuidado en Salud Visual',
         descripcion: 'Nos preocupamos por el correcto funcionamiento de ojos, nervios y músculos involucrados en el proceso de la visión.',
         boton: 'Conoce Más',

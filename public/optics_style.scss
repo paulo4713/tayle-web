@@ -32,18 +32,71 @@
     }
     .optics_products__content {
       width: 80%;
-      .order_bar__sort_by_wrapper {
-        display: flex;
-        justify-content: flex-end;
+
+      .order_bar {
+        background: #f7f7f7;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #666666;
+
+        .order_bar__sort_by_wrapper {
+          display: flex;
+          justify-content: flex-end;
+
+          .form-control {
+            background: #fff;
+            margin: 0 10px;
+            padding: 5px 10px;
+            -webkit-appearance: menulist-button;
+          }
+          .sort_by_wrapper__label {
+            padding: 5px 0;
+          }
+        }
       }
+
       .products_list {
         display: flex;
         flex-flow: row wrap;
+        justify-content: space-between;
 
         .product_box {
           flex-shrink: 1;
           flex-basis: auto;
-          width: 25%;
+          text-align: center;
+          width: 260px;
+          margin-bottom: 20px;
+          transition: 0.5s;
+          border-radius: 10px;
+          &:hover {
+            box-shadow: 0 0 10px #ccc;
+            transition: 0.5s;
+
+            button {
+              background: #00c7d3;
+              color: #fff;
+            }
+          }
+          img {
+            width: 80%;
+          }
+          .product_box__caption * {
+            margin: 6px 0;
+          }
+          .glass_reference {
+            font-size: 14px;
+          }
+          .price {
+            color: #00c7d3;
+            font-weight: 900;
+            letter-spacing: 1px;
+
+            &:before {
+              content: "$";
+            }
+          }
         }
       }
     }

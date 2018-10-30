@@ -156,4 +156,8 @@
 .optics_products .content .optics_products__content .products_list .product_box .price:before {
   content: "$";
 }
+
+.optics_products .content .optics_products__content .products_list .product_box button {
+  padding: 15px 30px;
+}
 /*# sourceMappingURL=optics_style.css.map */

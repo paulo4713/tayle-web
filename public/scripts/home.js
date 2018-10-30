@@ -1,3 +1,4 @@
+window.addEventListener('load', function(){
 var arregloServicios = [
     {
         img: './icons/optotype.png',
@@ -27,8 +28,6 @@ var arregloServicios = [
         boton: 'Conoce más',
     }
 ];
-
-//-------------------------------------------------------------------5
 
 function constructorServicio(objeto) {
     return `<article class="services__wrap__item">
@@ -83,3 +82,4 @@ function cambiarBlur() {
 
 var interevaloBanner = setInterval(cambiarBlur, 10);
 
+});

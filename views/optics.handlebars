@@ -3,7 +3,7 @@
 
 <head>
     {{>head}}
-    <link rel="stylesheet" href="/optics_style.css">
+    <link rel="stylesheet" href="/styles/optics_style.css">
 </head>
 
 <body>
@@ -154,9 +154,7 @@
                                 <span class="price">{{this.price}}</span>
                             </p>
                             <h4 class="glass_reference"><a href="/optics/{{this.name}}">{{this.name}} {{this.ref}}</a></h4>
-                            <div class="btn-add-to-cart">
-                                <button type="button" title="Add to cart" class="addtocart">Add to Cart</button>
-                            </div>
+                            <button data-title="{{this.name}} {{this.ref}}" data-price="{{this.price}}" data-img="{{this.img_a}}" class="addtocart">Agregar al Carrito</button>
                         </div>
                     </div>
                     {{/each}}

@@ -35,7 +35,7 @@
 
       .order_bar {
         background: #f7f7f7;
-        padding: 10px 0;
+        padding: 12px 0;
         margin-bottom: 20px;
         font-size: 14px;
         font-weight: 600;
@@ -68,8 +68,26 @@
           text-align: center;
           width: 260px;
           margin-bottom: 20px;
-          transition: 0.5s;
+          transition: 0.3s;
           border-radius: 10px;
+
+          .product_box__image {
+            position: relative;
+            img {
+              &:last-child {
+                position: absolute;
+                left: 10%;
+                opacity: 0;
+                transition: 0.5s;
+
+                &:hover {
+                  opacity: 1;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+
           &:hover {
             box-shadow: 0 0 10px #ccc;
             transition: 0.5s;
@@ -79,6 +97,7 @@
               color: #fff;
             }
           }
+
           img {
             width: 80%;
           }
@@ -87,6 +106,10 @@
           }
           .glass_reference {
             font-size: 14px;
+            a {
+              color: #4d4d4d !important;
+            }
+            
           }
           .price {
             color: #00c7d3;

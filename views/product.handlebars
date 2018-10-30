@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {{>head}}
+    <link rel="stylesheet" href="/product_style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        {{>header}}
+    </div>
+    {{#each productos}}
+    <div class="breadcrumbs">
+        <div class="content">
+            <span><a href="/">Inicio</a> <i class="fas fa-angle-right"></i> <a href="/optics">Óptica</a> <i class="fas fa-angle-right"></i>
+                <strong>{{name}} {{ref}}</strong></span>
+        </div>
+    </div>
+    <section class="product_detail_wrap">
+        <div class="content">
+            <section class="product_detail">
+                <article class="product_detail__img_wrapper">
+                    <div class="ppal_img">
+                        <img src="{{img_a}}" alt="">
+                    </div>
+                    <div class="other_images">
+                        <div class="active">
+                            <img src="{{img_a}}" alt="">
+                        </div>
+                        <div>
+                            <img src="{{img_b}}" alt="">
+                        </div>
+                    </div>
+                </article>
+                <article class="product_detail__info">
+                    <h2 class="info__title">{{name}} {{ref}}</h2>
+                    <h3 class="info__price">{{price}}</h3>
+                    <p class="info__description">{{description}}</p>
+                    <button>Agregar al Carrito</button>
+                </article>
+            </section>
+        </div>
+    </section>
+
+    {{/each}}
+    <div class="wrapper">
+        {{>footer}}
+    </div>
+</body>
+
+</html>

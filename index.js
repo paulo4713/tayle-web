@@ -46,7 +46,7 @@ app.get('/', function (request, response) {
     response.render('index');
 });
 
-app.get('/optica', function (request, response) {
+app.get('/optics', function (request, response) {
     const collection = db.collection('productos');
     collection.find({}).toArray(function(err, docs) {
         if (err){
@@ -57,16 +57,28 @@ app.get('/optica', function (request, response) {
         var contexto = {
             productos: docs,
         };
-        response.render('optica', contexto);
+        response.render('optics', contexto);
     });
 });
 
 
 //RUTA DINÁMICA
 //Al usar /: estoy usando una variable
-app.get('/optica/:producto', function (request, response) {
-    var prod = request.params.producto;
-    response.send('página de producto: ' + prod);
+app.get('/optics/:producto', function (request, response) {
+    var prodName = request.params.producto;
+    const collection = db.collection('productos');
+    collection.find({"name": prodName}).toArray(function(err, docs) {
+        if (err){
+            console.error(err);
+            response.send(err);
+            return;
+        }
+        var contexto = {
+            productos: docs,
+        };
+        
+        response.render('product', contexto);
+    });
 });
 
 app.listen(8080);

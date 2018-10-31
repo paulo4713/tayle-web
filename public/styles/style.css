@@ -1032,15 +1032,4 @@ body {
   color: #00c7d3;
   font-weight: 400;
 }
-
-.lista-carrito {
-  margin: 50px 0;
-  border-collapse: collapse;
-}
-
-.lista-carrito th,
-.lista-carrito td {
-  border: 1px solid #dddddd;
-  text-align: left;
-}
 /*# sourceMappingURL=style.css.map */

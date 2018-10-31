@@ -49,8 +49,13 @@
                     <h2 class="info__title">{{name}} {{ref}}</h2>
                     <h3 class="info__price">{{price}}</h3>
                     <p class="info__description">{{description}}</p>
-                    <button data-name="{{this.name}} {{this.ref}}" data-price="{{this.price}}" data-img="{{this.img_a}}"
-                        class="addtocart">Agregar al Carrito</button>
+                    <div class="buttons">
+                        <button data-name="{{this.name}} {{this.ref}}" data-price="{{this.price}}" data-img="{{this.img_a}}"
+                            class="addtocart">Agregar al Carrito</button>
+                        <a href="/checkout">
+                            <button>Ir a checkout</button>
+                        </a>
+                    </div>
                 </article>
             </section>
         </div>
@@ -62,6 +67,7 @@
     </div>
 
     <script src="/scripts/cart.js"></script>
+    <script src="/scripts/product.js"></script>
 </body>
 
 </html>

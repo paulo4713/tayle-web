@@ -1,0 +1,42 @@
+.checkout_wrap {
+  background: #fff;
+  padding: 50px 0;
+
+  .empty_cart {
+    text-align: center;
+    display: none;
+  }
+  .cart_list_wrap {
+    text-align: center;
+
+    .cart_list {
+      border-collapse: collapse;
+      width: 70%;
+      margin: 0 auto; 
+      margin-bottom: 30px;
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 10px;
+      }
+
+      .item_img {
+        width: 25%;
+
+        img {
+          width: 70%;
+          padding: 0 15%;
+        }
+      }
+    }
+  }
+}
+
+button {
+  &:hover {
+    background: #00c7d3;
+    color: #fff;
+  }
+}

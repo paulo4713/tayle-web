@@ -18,7 +18,7 @@ window.addEventListener('load', function(){
     
     document.querySelector('.clear_carrito').addEventListener('click', function(){
         localStorage.removeItem('carrito');
-        renderCarrito();
+        location.reload(true);
     });
 
     document.querySelectorAll('.addtocart').forEach(function(elem){

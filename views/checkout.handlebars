@@ -3,6 +3,7 @@
 
 <head>
     {{>head}}
+    <link rel="stylesheet" href="/styles/checkout_style.css">
 </head>
 
 <body>
@@ -33,15 +34,23 @@
             </div>
         </div>
     </div>
-    <section class="product_detail_wrap">
+    <section class="checkout_wrap">
         <div class="content">
-            <table class="lista-carrito">
-                <tr>
-                    <th>Imagen de Referencia</th>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                </tr>
-            </table>
+            <div class="empty_cart">
+                <h1>Tu carrito esta vacío.</h1>
+                <p>Empieza a comprar aquí</p>
+                <a href="/optics"><button>Agregar productos</button></a>
+            </div>
+            <div class="cart_list_wrap">
+                <table class="cart_list">
+                    <tr>
+                        <th class="item_img">Imagen de Referencia</th>
+                        <th class="item_name">Producto</th>
+                        <th class="item_price">Precio</th>
+                    </tr>
+                </table>
+                <a href="/optics"><button>Agrega más productos</button></a>
+            </div>
         </div>
     </section>
 

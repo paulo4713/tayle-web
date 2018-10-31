@@ -155,7 +155,7 @@ button {
 
 .main_slider {
   .main_slider__banner {
-    background-image: url(./img/banner1.jpg);
+    background-image: url(/img/banner1.jpg);
     height: 700px;
     background-size: cover;
   }
@@ -239,7 +239,7 @@ button {
 .interaction {
   position: relative;
   .interaction__background {
-    background-image: url("./img/interactionImg1.jpg");
+    background-image: url("/img/interactionImg1.jpg");
     background-size: cover;
     height: 700px;
   }
@@ -278,7 +278,7 @@ button {
 }
 
 .mission {
-  background-image: url("./img/missionImg.jpg");
+  background-image: url("/img/missionImg.jpg");
   background-size: cover;
   height: 530px;
   margin: 0;
@@ -369,11 +369,11 @@ button {
         height: 360px;
 
         &.luz_elena {
-          background-image: url(./img/opt1.jpg);
+          background-image: url('/img/opt1.jpg');
         }
 
         &.tomas_a {
-          background-image: url(./img/opt2.jpg);
+          background-image: url('/img/opt2.jpg');
         }
       }
       .team__wrap__item__description {

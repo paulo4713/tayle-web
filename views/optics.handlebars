@@ -13,7 +13,17 @@
 
     <div class="breadcrumbs">
         <div class="content">
-            <span><a href="/">Inicio</a> <i class="fas fa-angle-right"></i> <a href="/optics"><strong>Óptica</strong></a></span>
+            <div class="breadcrumbs_wrapper">
+                <span><a href="/">Inicio</a> <i class="fas fa-angle-right"></i> <a href="/optics"><strong>Óptica</strong></a></span>
+                <div class="carrito_wrap">
+                    <div class="qty_ico">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="quantity"></span>
+                    </div>
+                    <span class="carrito"></span>
+                    <span class="clear_carrito"><i class="fas fa-trash-alt"></i></span>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -154,7 +164,8 @@
                                 <span class="price">{{this.price}}</span>
                             </p>
                             <h4 class="glass_reference"><a href="/optics/{{this.name}}">{{this.name}} {{this.ref}}</a></h4>
-                            <button data-title="{{this.name}} {{this.ref}}" data-price="{{this.price}}" data-img="{{this.img_a}}" class="addtocart">Agregar al Carrito</button>
+                            <button data-title="{{this.name}} {{this.ref}}" data-price="{{this.price}}" data-img="{{this.img_a}}"
+                                class="addtocart">Agregar al Carrito</button>
                         </div>
                     </div>
                     {{/each}}
@@ -166,6 +177,8 @@
     <div class="wrapper">
         {{>footer}}
     </div>
+
+    <script src="/scripts/cart.js"></script>
 </body>
 
 </html>

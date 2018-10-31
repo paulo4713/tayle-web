@@ -10,17 +10,23 @@ window.addEventListener('load', function(){
         elementosCarrito.forEach(function(elem){
             total += parseInt(elem.precio);
         });
-        document.querySelector('.carrito').innerText = 'Total: $' + total + ' - ' + elementosCarrito.length;
+        document.querySelector('.carrito').innerText = 'Total: $' + total;
+        document.querySelector('.quantity').innerText = elementosCarrito.length;
     }
 
     renderCarrito();
+    
+    document.querySelector('.clear_carrito').addEventListener('click', function(){
+        localStorage.removeItem('carrito');
+        renderCarrito();
+    });
 
     document.querySelectorAll('.addtocart').forEach(function(elem){
         elem.addEventListener('click', function(){
 
             let obj = {
                 title: elem.getAttribute('data-title'),
-                precio: elem.getAttribute('data-precio'),
+                precio: elem.getAttribute('data-price'),
                 img: elem.getAttribute('data-img'),
             };
 

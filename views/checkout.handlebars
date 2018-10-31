@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {{>head}}
+</head>
+
+<body>
+    <div class="wrapper">
+        {{>header}}
+    </div>
+    <ul>
+        {{#each carrito}}
+        <li>{{name}}</li>
+        {{/each}}
+    </ul>
+
+    <div class="breadcrumbs">
+        <div class="content">
+            <div class="breadcrumbs_wrapper">
+                <span><a href="/">Inicio</a> <i class="fas fa-angle-right"></i> <a href="/optics">Óptica</a> <i class="fas fa-angle-right"></i>
+                    <a href="/checkout"><strong>Checkout</strong></a></span>
+                <div class="carrito_wrap">
+                    <a href="/checkout">
+                        <span class="checkout">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="quantity"></span>
+                        </span>
+                    </a>
+                    <span class="carrito"></span>
+                    <span class="clear_carrito"><i class="fas fa-trash-alt"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="product_detail_wrap">
+        <div class="content">
+            <table class="lista-carrito">
+                <tr>
+                    <th>Imagen de Referencia</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <ul class="lista-carrito"></ul>
+
+    <div class="wrapper">
+        {{>footer}}
+    </div>
+
+
+    <script src="/scripts/cart.js"></script>
+    <script src="/scripts/checkout.js"></script>
+</body>
+
+</html>

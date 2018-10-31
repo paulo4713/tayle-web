@@ -13,8 +13,20 @@
     {{#each productos}}
     <div class="breadcrumbs">
         <div class="content">
-            <span><a href="/">Inicio</a> <i class="fas fa-angle-right"></i> <a href="/optics">Óptica</a> <i class="fas fa-angle-right"></i>
-                <strong>{{name}} {{ref}}</strong></span>
+            <div class="breadcrumbs_wrapper">
+                <span><a href="/">Inicio</a> <i class="fas fa-angle-right"></i> <a href="/optics">Óptica</a> <i class="fas fa-angle-right"></i>
+                    <strong>{{name}} {{ref}}</strong></span>
+                <div class="carrito_wrap">
+                    <a href="/checkout">
+                        <span class="checkout">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="quantity"></span>
+                        </span>
+                    </a>
+                    <span class="carrito"></span>
+                    <span class="clear_carrito"><i class="fas fa-trash-alt"></i></span>
+                </div>
+            </div>
         </div>
     </div>
     <section class="product_detail_wrap">
@@ -37,7 +49,8 @@
                     <h2 class="info__title">{{name}} {{ref}}</h2>
                     <h3 class="info__price">{{price}}</h3>
                     <p class="info__description">{{description}}</p>
-                    <button class="addtocart">Agregar al Carrito</button>
+                    <button data-name="{{this.name}} {{this.ref}}" data-price="{{this.price}}" data-img="{{this.img_a}}"
+                        class="addtocart">Agregar al Carrito</button>
                 </article>
             </section>
         </div>
@@ -47,6 +60,8 @@
     <div class="wrapper">
         {{>footer}}
     </div>
+
+    <script src="/scripts/cart.js"></script>
 </body>
 
 </html>

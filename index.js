@@ -1,6 +1,5 @@
 //importamos los paquetes
 const express = require('express');
-const bodyParser = require('body-parser');
 const path = require('path');
 const MongoClient = require('mongodb').MongoClient;
 
@@ -33,6 +32,13 @@ app.use(express.static('public'));
 
 app.engine('handlebars', hbs());
 app.set('view engine', 'handlebars');
+
+var bodyParser = require('body-parser');
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
+app.use(express.json());
 
 //var products = require('./products.js');
 
@@ -79,6 +85,33 @@ app.get('/optics/:producto', function (request, response) {
         
         response.render('product', contexto);
     });
+});
+
+
+var carrito = [];
+
+app.post('/api/agregarAlCarrito', function(req, res){
+
+    
+
+    let name = req.body.name;
+    console.log(name);
+    
+    const collection = db.collection('productos');
+
+    let glasses = collection.find({"name": name});
+
+    carrito.push(glasses);
+
+    res.send(carrito);
+});
+
+
+app.get('/checkout', function(req, res){
+    var contexto = {
+        carrito: carrito,
+    };
+    res.render('checkout', contexto);
 });
 
 app.listen(8080);

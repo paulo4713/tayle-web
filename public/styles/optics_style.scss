@@ -1,32 +1,4 @@
-.breadcrumbs_wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
 
-  .carrito_wrap {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 180px;
-    align-items: center;
-    font-weight: 900;
-    color: #00c7d3;
-    position: relative;
-    z-index: 0;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 120%;
-      height: 35px;
-      top: -7px;
-      left: -10%;
-      background-color: #fff;
-      z-index: -1;
-      border-radius: 5px;
-    }
-  }
-}
 
 .optics_products {
   background: #fff;

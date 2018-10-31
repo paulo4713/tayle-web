@@ -69,7 +69,7 @@ button {
     box-shadow: 0px 5px 20px #0e0b0b33;
     transition: 0.5s;
   }
-  &:focus{
+  &:focus {
     outline: none;
   }
 }
@@ -369,11 +369,11 @@ button {
         height: 360px;
 
         &.luz_elena {
-          background-image: url('/img/opt1.jpg');
+          background-image: url("/img/opt1.jpg");
         }
 
         &.tomas_a {
-          background-image: url('/img/opt2.jpg');
+          background-image: url("/img/opt2.jpg");
         }
       }
       .team__wrap__item__description {
@@ -760,8 +760,57 @@ $range-label-width: 60px !default;
   background-color: #00c7d3;
   color: #fff;
   padding: 15px 0;
-  a{
+  a {
     color: #fff;
     font-weight: 400;
+  }
+
+  .breadcrumbs_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .carrito_wrap {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      width: 180px;
+      align-items: center;
+      font-weight: 900;
+      color: #00c7d3;
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 35px;
+        top: -7px;
+        left: -10%;
+        background-color: #fff;
+        z-index: -1;
+        border-radius: 5px;
+      }
+
+      .clear_carrito {
+        cursor: pointer;
+      }
+
+      a {
+        color: #00c7d3;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.lista-carrito {
+  margin: 50px 0;
+  border-collapse: collapse;
+  th,
+  td {
+    border: 1px solid #dddddd;
+    text-align: left;
   }
 }

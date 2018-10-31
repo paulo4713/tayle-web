@@ -54,6 +54,7 @@ app.get('/', function (request, response) {
 
 app.get('/optics', function (request, response) {
     const collection = db.collection('productos');
+    
     collection.find({}).toArray(function(err, docs) {
         if (err){
             console.error(err);
@@ -96,7 +97,7 @@ app.post('/api/agregarAlCarrito', function(req, res){
 
     let name = req.body.name;
     console.log(name);
-    
+
     const collection = db.collection('productos');
 
     let glasses = collection.find({"name": name});

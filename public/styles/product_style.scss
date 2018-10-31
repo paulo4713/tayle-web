@@ -14,7 +14,7 @@
       .ppal_img {
         img {
           width: 90%;
-          transition: .3s;
+          transition: 0.3s;
         }
       }
       .other_images {
@@ -26,12 +26,12 @@
           flex-basis: auto;
           flex-shrink: 1;
           width: 30%;
-          transition: .3s;
+          transition: 0.3s;
           cursor: pointer;
 
-          &.active{
+          &.active {
             opacity: 1;
-          transition: .3s;
+            transition: 0.3s;
           }
 
           img {
@@ -69,6 +69,31 @@
           background-color: #00c7d3;
           color: #fff;
         }
+      }
+    }
+  }
+}
+
+$width-name: max-device-width;
+$target-width: 420px;
+
+@media screen and ($width-name: $target-width) {
+  .product_detail {
+    flex-flow: column !important;
+    align-items: center;
+    .product_detail__img_wrapper {
+      width: 90% !important;
+    }
+    .product_detail__info {
+      width: 90% !important;
+      margin-left: 0 !important;
+    }
+
+    .buttons {
+      text-align: center;
+      button {
+        width: 100%;
+        margin-bottom: 20px;
       }
     }
   }

@@ -548,7 +548,7 @@ button {
   .bottom_bar {
     background: $primary-color;
     .bottom_bar__nav_footer {
-      display: inline-flex;
+      display: flex;
       flex-flow: row wrap;
       .bottom_bar__nav_footer__link {
         padding: 15px 20px;
@@ -566,13 +566,13 @@ button {
     }
   }
   .contact {
-    display: inline-flex;
+    display: flex;
     flex-flow: row wrap;
     margin-bottom: 30px;
     .contact__column {
       flex-basis: 0;
       flex-grow: 1;
-      display: inline-flex;
+      display: flex;
       flex-flow: column;
       width: 500px;
       &.left {
@@ -805,4 +805,42 @@ $range-label-width: 60px !default;
   }
 }
 
+$width-name: max-device-width;
+$target-width: 420px;
 
+@media screen and ($width-name: $target-width) {
+  .top_bar {
+    display: none;
+}
+  .breadcrumbs {
+    .breadcrumbs_wrapper {
+      justify-content: space-around;
+      flex-flow: column wrap;
+      align-items: center;
+      .carrito_wrap {
+        margin-top: 20px;
+    }
+    }
+  }
+  .content {
+    width: 100%;
+  }
+
+  .contact {
+    .contact__column {
+      &.left {
+        align-items: flex-start !important;
+      }
+    }
+    .left {
+      .info_contact__item {
+        flex-direction: row-reverse !important;
+        text-align: left !important;
+        .info_contact__item__icon {
+          margin-right: 10px;
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+}

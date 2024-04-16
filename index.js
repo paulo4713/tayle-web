@@ -10,6 +10,7 @@ var assert = require('assert');
 //Asociamos express a la app
 const app = express();
 
+/* ESTE BLOQUE ESTÁ OBSOLETO
 const url = 'mongodb://localhost:27017';
 const dbName = 'tayle-web';
 
@@ -23,6 +24,7 @@ client.connect(function (err) {
     }
     db = client.db(dbName);
 });
+*/
 
 //configuramos nuestro servidor para archivos locales
 app.use(express.static('public'));
